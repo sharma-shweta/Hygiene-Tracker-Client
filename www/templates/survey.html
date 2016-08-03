@@ -1,0 +1,32 @@
+<ion-view title="Survey">
+    <ion-nav-bar class="bar-dark" align-title="center"></ion-nav-bar>
+    <ion-content padding="true" class="has-header">
+        <form class="list" ng-submit="reloadRoute()">
+            <label class="item item-select">
+                <span class="input-label">Client</span>
+                <select ng-model="selectedClient" ng-options="client.name for client in clients">
+                </select>
+            </label>
+
+            <div class="spacer" style="width: 300px; height: 30px;"></div>
+            <ion-list></ion-list>
+            <ion-list>
+                <ion-item class="item-divider">Questionnaire</ion-item>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+
+            <label class="item item-select">
+                <span class="input-label">Where do you dispose garbage?</span>
+                <select ng-model="selectedA2" ng-options="ans.name for ans in ans2"></select>
+            </label>
+            <label class="item item-select">
+                <span class="input-label">Where do you dispose water?</span>
+                <select ng-model="selectedA1" ng-options="ans.name for ans in ans1"></select>
+            </label>
+
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+            
+            <button class="button button-block button-calm" type="submit">Submit</button>
+        </form>
+    </ion-content>
+</ion-view>

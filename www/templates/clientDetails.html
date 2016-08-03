@@ -1,0 +1,46 @@
+<ion-view title="Client Details" cache-view="false">
+    <ion-nav-bar class="bar-dark" align-title="center"></ion-nav-bar>
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-select">
+                <span class="input-label">Occupation</span>
+                <select ng-model="selectedOccupation" ng-options="occupation.name for occupation in occupations">
+                </select>
+            </label>
+            <label class="item item-select">
+                <span class="input-label">House Type</span>
+                <select ng-model="selectedHouseType" ng-options="houseType.name for houseType in houseTypes">
+                </select>
+            </label>
+            <label class="item item-select">
+                <span class="input-label">Survey Type</span>
+                <select ng-model="selectedSurveyType" ng-options="surveyType.name for surveyType in surveyTypes">
+                </select>
+            </label>
+            <div class="spacer" style="width: 300px; height: 38px;"></div>
+            <label class="item item-input">
+                <span class="input-label">Male Adults</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Female Adults</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Male Children</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Female Children</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Total School Going</span>
+                <input type="text" placeholder="">
+            </label>
+
+            <div class="spacer" style="width: 300px; height: 38px;"></div>
+            <button class="button button-calm button-block" ng-click="submit()">Submit</button>
+        </form>
+    </ion-content>
+</ion-view>
